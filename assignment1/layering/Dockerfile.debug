@@ -8,4 +8,4 @@ WORKDIR /home/iem4723/
 COPY ./LogisticRegressor.py /home/iem4723/LogisticRegressor.py
 
 #TODO: write the command here to run LogisticRegressor.py, HINT you might want to look at CMD ["python3", "your-filename.py"]
-CMD ["python3", "LogisticRegressor.py"]
+CMD tail -f /dev/null

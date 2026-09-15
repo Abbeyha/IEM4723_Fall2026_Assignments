@@ -7,3 +7,10 @@ docker push abbeygayle/linear-regression-app:latest
 # Question 2
 docker build -t regression-volume-app .
 docker run --volume "${PWD}\data:/home/iem4723/data" regression-volume-app
+# Question 3
+docker build -t logistic_regression_layered:latest .
+docker build -f Dockerfile.debug -t logistic_regression_layered:latest .
+docker run -d --name layered_ex2 logistic_regression_layered:latest
+docker exec -it layered_ex2 /bin/sh
+docker build -t logistic_regression_layered:latest .
+docker run --volume "${PWD}\data:/home/iem4723/data" logistic_regression_layered:latest
